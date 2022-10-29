@@ -83,7 +83,7 @@ if(isset($message)){
       placeholder là các hiển thị dòng chữ mờ khi chưa có dữ liệu được nhập vào  -->
       <input type="password" name="pass" class="box" placeholder="enter your password" required>
       <input type="submit" value="login now" class="btn" name="submit">
-      <p>don't have an account? <a href="register.php">register now</a></p>
+      <p>Don't have an account? <a href="register.php">register now</a></p>
    </form>
 
 </section>
