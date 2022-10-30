@@ -3,15 +3,15 @@ CREATE DATABASE Webmanagement;
 
 DROP TABLE IF EXISTS UserInfo;
 CREATE TABLE UserInfo (
-  UserId int(100) NOT NULL,
+  UserId int(100) NOT NULL AUTO_INCREMENT,
   UserName varchar(100) NOT NULL,
   UserEmail varchar(100) NOT NULL,
   UserPassword varchar(100) NOT NULL,
-  UserPhone int(10),
+  UserPhone varchar(10),
   UserBirthday date,
   UserImage varchar(100) NOT NULL,
   PRIMARY KEY (UserId)
-) CHARSET=utf8mb4;
+) CHARSET=utf8;
 
 DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
@@ -22,4 +22,11 @@ CREATE TABLE Products (
   ProductsPrice int(100) NOT NULL,
   ProductsImage varchar(100) NOT NULL,
   PRIMARY KEY (ProductsId)
-) CHARSET=utf8mb4;
+) CHARSET=utf8;
+
+INSERT INTO userinfo (`UserName`, `UserEmail`, `UserPassword`, `UserPhone`, `UserBirthday`, `UserImage`)
+VALUES 
+	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0798222937', '2002-09-02', 'images\\pic-1.png'),
+	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-24', 'images\\pic-2.png'), 
+	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-09-02', 'images\\pic-3.png'),
+	('Trang', '030236200180@st.buh.edu.vn', 'dangki', '0906060505', '2002-05-24', 'images\\pic-4.png');
