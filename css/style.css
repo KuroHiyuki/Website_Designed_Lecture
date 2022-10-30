@@ -382,7 +382,7 @@
 
 
 
- 
+ /*
 
 .wishlist .box-container{
    display: grid;
@@ -490,6 +490,7 @@
 .wishlist .wishlist-total p span{
    color:var(--red);
 }
+*/
 /*
 .shopping-cart .box-container{
    display: grid;
@@ -705,7 +706,7 @@
  .flex .search-box-container label:hover{
    background:var(--black);
  }
-
+/*
 .checkout-orders form .flex{
    display: flex;
    flex-wrap: wrap;
@@ -759,7 +760,7 @@
 .placed-orders .box-container .box p span{
    color:var(--green);
 }
-
+*/
 .flex{
    background:#eee;
    display: flex;
