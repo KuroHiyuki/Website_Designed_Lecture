@@ -1,6 +1,6 @@
 <?php
 // Hiện tại chỉ hoàn thành chỉnh sữa xong giao diện 
-//include 'config.php';
+include 'config.php';
 
 session_start();
 
@@ -8,36 +8,36 @@ if(isset($_POST['submit'])){
 
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = md5($_POST['pass']);
+   $pass = $_POST['pass'];
+   //hàm mã hoá md5 la danh cho việc nghiền chuỗi thành các đoạn số mã hoá
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
    
-   /*$sql = "SELECT * FROM `users` WHERE email = ? AND password = ?";
-   $stmt = $conn->prepare($sql);
-   $stmt->execute([$email, $pass]);
+   $sql = "SELECT * FROM UserInfo WHERE UserEmail = ?";
+   $stmt = $connect->prepare($sql);
+   // Đoạn lệnh prepare là để khắc phục lỗi SQL injection 
+   $stmt->execute([$email]);
    $rowCount = $stmt->rowCount();  
-
-   $row = $stmt->fetch(PDO::FETCH_ASSOC);
+   $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
    if($rowCount > 0){
+      while($row = $stmt->fetch()) {
 
-      if($row['user_type'] == 'admin'){
+         if($row['UserPassword'] == $pass){
 
-         $_SESSION['admin_id'] = $row['id'];
-         header('location:admin_page.php');
-
-      }elseif($row['user_type'] == 'user'){
-
-         $_SESSION['user_id'] = $row['id'];
-         header('location:home.php');
-
-      }else{
-         $message[] = 'no user found!';
+            $_SESSION['UserName'] = $row['UserName'];
+            header('location:home.php');
+            setcookie("Success", "Logged in successfully!", time()+1, "/","", 0);
+         }
+         else{
+         $message[] = 'Incorrect email or password!';
+         setcookie("Error", "Login failed!", time()+1, "/","", 0);
       }
+   }
 
    }else{
-      $message[] = 'incorrect email or password!';
-   }*/
-
+      $message[] = 'No user found!';
+      setcookie("Error", "Login failed!", time()+1, "/","", 0);
+   }
 }
 
 ?>
@@ -53,6 +53,9 @@ if(isset($_POST['submit'])){
 
    <title>Login</title>
 
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
    <!-- Liên kết đến css  -->
    <link rel="stylesheet" href="css/components.css">
 
@@ -63,7 +66,7 @@ if(isset($_POST['submit'])){
 if(isset($message)){
    foreach($message as $message){
       echo '
-      <div class="message">
+      <div class="message i">
          <span>'.$message.'</span>
          <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
       </div>
@@ -78,10 +81,10 @@ if(isset($message)){
 để trình bày section này ở trang này  -->
    <form action="" method="POST">
       <h3>LOGIN NOW</h3>
-      <input type="email" name="email" class="box" placeholder="enter your email" required>
+      <input type="email" name="email" class="box" placeholder="Enter your email" required>
       <!-- class = box tương tự như form container
       placeholder là các hiển thị dòng chữ mờ khi chưa có dữ liệu được nhập vào  -->
-      <input type="password" name="pass" class="box" placeholder="enter your password" required>
+      <input type="password" name="pass" class="box" placeholder="Enter your password" required>
       <input type="submit" value="login now" class="btn" name="submit">
       <p>Don't have an account? <a href="register.php">register now</a></p>
    </form>
