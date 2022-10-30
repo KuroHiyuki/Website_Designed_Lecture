@@ -26,7 +26,7 @@ CREATE TABLE Products (
 
 INSERT INTO userinfo (`UserName`, `UserEmail`, `UserPassword`, `UserPhone`, `UserBirthday`, `UserImage`)
 VALUES 
-	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0798222937', '2002-09-02', 'images\\pic-1.png'),
-	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-24', 'images\\pic-2.png'), 
-	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-09-02', 'images\\pic-3.png'),
-	('Trang', '030236200180@st.buh.edu.vn', 'dangki', '0906060505', '2002-05-24', 'images\\pic-4.png');
+	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0909090909', '2002-09-02', 'images\\pic-1.png'),
+	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-26', 'images\\pic-2.png'), 
+	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-11-10', 'images\\pic-3.png'),
+	('Trang', '030236200180@st.buh.edu.vn', 'trangday', '0906060505', '2002-10-08', 'images\\pic-4.png');
