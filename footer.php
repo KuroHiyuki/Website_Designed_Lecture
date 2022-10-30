@@ -20,22 +20,24 @@
 
       <div class="box">
          <h3>contact info</h3>
-         <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+         <p> <i class="fas fa-phone"></i> +84935 530 709 </p>
          <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
-         <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
-         <p> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </p>
+         <p> <i class="fas fa-envelope"></i> healthyfood@gmail.com </p>
+         <p> <i class="fas fa-map-marker-alt"></i> TP. Ho Chi Minh, Viet Nam </p>
       </div>
 
       <div class="box">
-         <h3>follow us</h3>
-         <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
-         <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
-         <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
-         <a href="#"> <i class="fab fa-linkedin"></i> Linkedin </a>
-      </div>
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
+            
+            <div class="share">
+                <a href="#" class="btn fab fa-facebook-f"></a>
+                <a href="#" class="btn fab fa-twitter"></a>
+                <a href="#" class="btn fab fa-instagram"></a>
+                <a href="#" class="btn fab fa-linkedin"></a>
+            </div>
 
    </section>
 
-   <p class="credit"> &copy; copyright @ <?= date('Y'); ?> by <span>mr. web designer</span> | all rights reserved! </p>
+   <p class="credit"> &copy; Healthyfood <?= date('Y'); ?> by <span>Team 9++</span></p>
 
 </footer>

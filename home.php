@@ -27,9 +27,9 @@ session_start();
    <section class="home">
 
       <div class="content">
-         <span>Don't panic, go organice</span>
+         <span>Act healthy. Be healthy. Eat healthy.</span>
          <h3>Reach For A Healthier You With Organic Foods</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto natus culpa officia quasi, accusantium explicabo?</p>
+         <p>The best and most efficient pharmacy is within your own system.</p>
          <a href="about.php" class="btn">about us</a>
       </div>
 
@@ -44,30 +44,30 @@ session_start();
    <div class="box-container">
 
       <div class="box">
-         <img src="images/brow rice.png" alt="">
+         <img src="images/browrice.png" alt="">
          <h3>Brown rice</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+         <p>A whole grain and a good source of magnesium, phosphorus, selenium, thiamine, niacin, vitamin B6, and manganese and does provide some fiber.</p>
          <a href="category.php?category=fruits" class="btn">Brown rice</a>
       </div>
 
       <div class="box">
          <img src="images/noodle_3.png" alt="">
          <h3>Noodles</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+         <p>Good for people with diabetes, overweight, create a feeling of fullness longer, support cholesterol control</p>
          <a href="category.php?category=meat" class="btn">Noodles</a>
       </div>
 
       <div class="box">
          <img src="images/granola_1.png" alt="">
          <h3>Granola</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+         <p>A food made of baked grains, nuts, and dried fruit. Good for the digestive tract, blood pressure and heart.</p>
          <a href="category.php?category=vegitables" class="btn">Granola</a>
       </div>
 
       <div class="box">
-         <img src="images/ingredient_1.jpg" alt="">
+         <img src="images/ingredient.jpg" alt="">
          <h3>Ingrendient</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
+         <p>We provide color additives, food additives, sweeteners, preservatives and so on. Healthyfood is specialized in supply food additives and ingredients.</p>
          <a href="category.php?category=fish" class="btn">Ingrendient</a>
       </div>
 
@@ -83,6 +83,7 @@ session_start();
 
 
 </section>
+
 
 <?php include 'footer.php'; ?>
 
