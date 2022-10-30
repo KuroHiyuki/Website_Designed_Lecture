@@ -1,0 +1,25 @@
+CREATE DATABASE Webmanagement;
+
+
+DROP TABLE IF EXISTS UserInfo;
+CREATE TABLE UserInfo (
+  UserId int(100) NOT NULL,
+  UserName varchar(100) NOT NULL,
+  UserEmail varchar(100) NOT NULL,
+  UserPassword varchar(100) NOT NULL,
+  UserPhone int(10),
+  UserBirthday date,
+  UserImage varchar(100) NOT NULL,
+  PRIMARY KEY (UserId)
+) CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS Products;
+CREATE TABLE Products (
+  ProductsId int(100) NOT NULL,
+  ProductsName varchar(100) NOT NULL,
+  ProductsCagetory varchar(20) NOT NULL,
+  ProductsDetails varchar(500) NOT NULL,
+  ProductsPrice int(100) NOT NULL,
+  ProductsImage varchar(100) NOT NULL,
+  PRIMARY KEY (ProductsId)
+) CHARSET=utf8mb4;
