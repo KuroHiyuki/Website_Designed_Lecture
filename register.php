@@ -1,46 +1,39 @@
 <?php
 
-//include 'config.php';
+include 'config.php';
 
 if(isset($_POST['submit'])){
 
+   $name = $_POST['name'];
+   $name = filter_var($name, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = md5($_POST['pass']);
+   $pass = $_POST['pass'];
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
-   $cpass = md5($_POST['cpass']);
+   $cpass = $_POST['cpass'];
    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
    $tel = $_POST['phone'];
-   $tel = filter_var($tel,FILTER_SANITIZE_NUMBERIC);
+   $tel = filter_var($tel,FILTER_SANITIZE_STRING);
    $birthday = $_POST['Birthday'];
 
-   /*$select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+   $select = $connect->prepare("SELECT * FROM UserInfo WHERE UserEmail = ?");
    $select->execute([$email]);
 
    if($select->rowCount() > 0){
-      $message[] = 'user email already exist!';
+      $message[] = 'User email already exist!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'Confirm password not matched!';
       }else{
-         $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image) VALUES(?,?,?,?)");
-         $insert->execute([$name, $email, $pass, $image]);
-
-         if($insert){
-            if($image_size > 2000000){
-               $message[] = 'image size is too large!';
-            }else{
-               move_uploaded_file($image_tmp_name, $image_folder);
-               $message[] = 'registered successfully!';
-               header('location:login.php');
-            }
-         }
+         $insert = $connect->prepare("INSERT INTO UserInfo (Username, UserEmail, UserPassword,UserPhone, UserBirthday) VALUES(?,?,?,?,?)");
+         $insert->execute([$name, $email, $pass, $tel, $birthday]);
+            $message[] = 'Registered successfully!';
+            header('location:login.php');
 
       }
-   }*/
+   }
 
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -49,6 +42,9 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Register</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/components.css">
@@ -75,10 +71,11 @@ if(isset($message)){
 
    <form action="" enctype="multipart/form-data" method="POST">
       <h3>Register now</h3>
+      <input type="name" name="name" class="box" placeholder="Enter your name" required></br>
       <input type="email" name="email" class="box" placeholder="Enter your email" required></br>
       <input type="password" name="pass" class="box" placeholder="Enter your password" required></br>
       <input type="password" name="cpass" class="box" placeholder="Confirm your password" required></br>
-      <input type="tel" name="phone" class="box" required pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="07xx.xxx.xxx"></br>
+      <input type="tel" name="phone" class="box" required pattern="[0-9]{4}[0-9]{3}[0-9]{3}" placeholder="07xx.xxx.xxx"></br>
       <input type="date" name="Birthday" class = "box"></br>
       <input type="submit" value="register now" class="btn" name="submit"></br>
       <p>Already have an account? <a href="login.php">Login now</a></p></br>

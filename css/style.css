@@ -763,12 +763,10 @@
 */
 .flex{
    background:#eee;
-   /* flex{display: flex, giúp các thành phần linh hoạt */
    display: flex;
    align-items: center;
-   /* justify-content: space-between tự cân đối kich thước của các phần tử bên trong*/
    justify-content: space-between;
-   padding:1rem 5%;
+   padding:2rem 9%;
  }
  
  .logo{

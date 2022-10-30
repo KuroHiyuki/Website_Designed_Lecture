@@ -16,15 +16,13 @@ if(isset($message)){
 <header class="header">
 
    <div class="flex">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
-">
-         <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
+   
+   <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
             <form action="" class="search-box-container">
                 <input type="search" id="search-box" placeholder="search here...">
                 <label for="search-box" class="fas fa-search"></label>
-            </form>
-
-        <!--<div id="menu-bar" class="fas fa-bars"></div>-->
+        </form>
+        <div id="menu-bar" class="fas fa-bars"></div>
       <nav class="navbar">
          <a href="home.php">Home</a>
          <a href="shop.php">Shop</a>
@@ -38,7 +36,7 @@ if(isset($message)){
          <a href="#" class="fas fa-user-circle"></a>
          <div id="menu-btn" class="fas fa-bars"></div>
          <div id="user-btn" class="fas fa-user"></div>
-         <!--<a href="search_page.php" class="fas fa-search"></a>-->
+         <a href="search_page.php" class="fas fa-search"></a>
          
       </div>
 
