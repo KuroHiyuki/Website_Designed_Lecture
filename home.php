@@ -44,31 +44,31 @@ session_start();
    <div class="box-container">
 
       <div class="box">
-         <img src="images/cat-1.png" alt="">
-         <h3>fruits</h3>
+         <img src="images/brow rice.png" alt="">
+         <h3>Brown rice</h3>
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=fruits" class="btn">fruits</a>
+         <a href="category.php?category=fruits" class="btn">Brown rice</a>
       </div>
 
       <div class="box">
-         <img src="images/cat-2.png" alt="">
-         <h3>meat</h3>
+         <img src="images/noodle_3.png" alt="">
+         <h3>Noodles</h3>
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=meat" class="btn">meat</a>
+         <a href="category.php?category=meat" class="btn">Noodles</a>
       </div>
 
       <div class="box">
-         <img src="images/cat-3.png" alt="">
-         <h3>vegitables</h3>
+         <img src="images/granola_1.png" alt="">
+         <h3>Granola</h3>
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=vegitables" class="btn">vegitables</a>
+         <a href="category.php?category=vegitables" class="btn">Granola</a>
       </div>
 
       <div class="box">
-         <img src="images/cat-4.png" alt="">
-         <h3>fish</h3>
+         <img src="images/ingredient_1.jpg" alt="">
+         <h3>Ingrendient</h3>
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat.</p>
-         <a href="category.php?category=fish" class="btn">fish</a>
+         <a href="category.php?category=fish" class="btn">Ingrendient</a>
       </div>
 
    </div>

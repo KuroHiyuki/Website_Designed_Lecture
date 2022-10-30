@@ -652,6 +652,54 @@
    margin-bottom: 2rem;
    font-size: 2.5rem;
 }
+.flex{
+   background:#eee;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding:2rem 9%;
+ }
+ 
+ .logo{
+   color:var(--black);
+   font-weight: bolder;
+   font-size: 3rem;
+ }
+ 
+ .logo i{
+   padding-right: .5rem;
+   color:var(--green);
+ }
+ 
+ .flex .search-box-container{
+   display: flex;
+   height:5rem;
+ }
+ 
+ .flex .search-box-container #search-box{
+   height: 100%;
+   width:100%;
+   padding:1rem;
+   font-size: 2rem;
+   color:#333;
+   border:.1rem solid rgba(0,0,0,.3);
+   text-transform: none;
+ }
+ 
+ .flex .search-box-container label{
+   height: 100%;
+   width:8rem;
+   font-size: 2.5rem;
+   line-height: 5rem;
+   color:#fff;
+   background:var(--green);
+   text-align: center;
+   cursor: pointer;
+ }
+ 
+ .flex .search-box-container label:hover{
+   background:var(--black);
+ }
 
 .checkout-orders form .flex{
    display: flex;
