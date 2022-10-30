@@ -2,6 +2,7 @@
 
 :root{
    --green:#27ae60;
+   --green-lt:#eafaf1;
    --orange:#f39c12;
    --red:#e74c3c;
    --black:#333;
@@ -117,20 +118,21 @@ section{
 .message{
    position: sticky;
    top:0;
-   max-width: 1200px;
+   max-width: 50%;
    margin:0 auto;
-   background-color: var(--light-bg);
+   background-color: var(--green);
    padding:2rem;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap:1.5rem;
+   gap:1rem;
    z-index: 10000;
+   text-align: center;
 }
 
 .message span{
    font-size: 2rem;
-   color:var(--black);
+   color:var(--green-lt);
 }
 
 .message i{
