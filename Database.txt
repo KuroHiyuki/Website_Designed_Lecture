@@ -1,3 +1,5 @@
+CREATE DATABASE Webmanagement;
+
 
 DROP TABLE IF EXISTS UserInfo;
 CREATE TABLE UserInfo (
