@@ -73,8 +73,8 @@ if(isset($message)){
       <h3>Register now</h3>
       <input type="name" name="name" class="box" placeholder="Enter your name" required></br>
       <input type="email" name="email" class="box" placeholder="Enter your email" required></br>
-      <input type="password" name="pass" class="box" placeholder="Enter your password" required></br>
-      <input type="password" name="cpass" class="box" placeholder="Confirm your password" minlength="6" maxlenth = "50"required></br>
+      <input type="password" name="pass" class="box" placeholder="Enter your password" minlength="6"  required></br>
+      <input type="password" name="cpass" class="box" placeholder="Confirm your password" required></br>
       <input type="tel" name="phone" class="box" required pattern="[0-9]{4}[0-9]{3}[0-9]{3}" placeholder="07xx.xxx.xxx"></br>
       <input type="date" name="Birthday" class = "box"></br>
       <input type="submit" value="register now" class="btn" name="submit"></br>
