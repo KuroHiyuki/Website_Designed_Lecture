@@ -29,19 +29,12 @@ if(isset($message)){
          <a href="orders.php">Orders</a>
          <a href="about.php">About</a>
          <a href="contact.php">Contact</a>
+          <?php if(!isset($_SESSION['UserName'])): ?>
+             <a href="login.php">Login</a>
+         <?php else :?>
+            <a href="logout.php">Logout</a>
+            <a href="#"><?=$_SESSION['fullname'] ?></a>
+         <?php endif; ?>
       </nav>
-
-      <div class="icons">
-         <a href="#" class="fas fa-heart"></a>
-         <a href="#" class="fas fa-user-circle"></a>
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <a href="search_page.php" class="fas fa-search"></a>
-         
-      </div>
-
-      
-
-   </div>
 
 </header>
