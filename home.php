@@ -43,7 +43,7 @@ session_start();
 
    <div class="box-container">
    <?php 
-            $sql = "SELECT * FROM Productshome ";
+            $sql = "SELECT * FROM ProductsHome ";
             $stmt = $connect->prepare($sql);
          
             $stmt->execute();
