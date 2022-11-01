@@ -9,7 +9,6 @@ if(isset($_POST['submit'])){
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
    $pass = $_POST['pass'];
-   //hàm mã hoá md5 la danh cho việc nghiền chuỗi thành các đoạn số mã hoá
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
    
    $sql = "SELECT * FROM UserInfo WHERE UserEmail = ?";
@@ -81,10 +80,10 @@ if(isset($message)){
 ?>
 <header class="header">
 
-<meta charset="UTF-8">
-<div class="flex">
+   <meta charset="UTF-8">
+   <div class="flex">
+   <a href="home.php" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
 
-<a href="home.php" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
 </header>
 
 <section class="form-container">

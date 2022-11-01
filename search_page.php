@@ -149,11 +149,6 @@ if(isset($_POST['add_to_cart'])){
 
 </section>
 
-
-
-
-
-
 <?php include 'footer.php'; ?>
 
 <script src="js/script.js"></script>
