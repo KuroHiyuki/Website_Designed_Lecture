@@ -10,7 +10,7 @@ CREATE TABLE UserInfo (
   UserBirthday date,
   UserImage varchar(100) NOT NULL,
   PRIMARY KEY (UserId)
-) CHARSET=utf8;
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
@@ -21,7 +21,7 @@ CREATE TABLE Products (
   ProductsPrice int(100) NOT NULL,
   ProductsImage varchar(100) NOT NULL,
   PRIMARY KEY (ProductsId)
-) CHARSET=utf8;
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 
 DROP TABLE IF EXISTS Message;
 CREATE TABLE Message (
@@ -32,12 +32,18 @@ CREATE TABLE Message (
   MessageNumber varchar(12) NOT NULL,
   Message varchar(500) NOT NULL,
   PRIMARY KEY (MessageId)
-) CHARSET=utf8;
-
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO userinfo (UserName, UserEmail, UserPassword, UserPhone, UserBirthday, UserImage)
 VALUES 
-	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0909090909', '2002-09-02', 'images\\pic-1.png'),
-	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-26', 'images\\pic-2.png'), 
-	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-11-10', 'images\\pic-3.png'),
-	('Trang', '030236200180@st.buh.edu.vn', 'trangday', '0906060505', '2002-10-08', 'images\\pic-4.png');
+	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0798222937', '2002-09-02', 'images\\pic-1.png'),
+	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-24', 'images\\pic-2.png'), 
+	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-09-02', 'images\\pic-3.png'),
+	('Trang', '030236200180@st.buh.edu.vn', 'dangki', '0906060505', '2002-05-24', 'images\\pic-4.png');
+
+INSERT INTO products (ProductsId, ProductsName, ProductsCagetory, ProductsDetails, ProductsPrice, ProductsImage)
+VALUES 
+	('0', 'Brown rice', 'Heathy foods', 'Brown rice is one of the whole grains, brown rice consists of bran fibers, rice germ and carbohydrate-rich endosperm.A whole grain and a good source of magnesium, phosphorus, vitamin B6,..., and manganese and does provide some fiber.', '29.000', 'images\\browrice.png'),
+	( '1','Noodles', 'Heathy foods', 'Good for people with diabetes, overweight, create a feeling of fullness longer, support cholesterol control, reduces the risk of cancer, Promotes weight loss', '35.000', 'images\\noodles_2.png'), 
+	('2','Granola', 'Healthy foods', 'Granola provides fiber mainly from oats and protein from nutritious nuts such as almonds, walnuts, macadamia nuts, pumpkin seeds...and imported dried fruits. Good for the digestive tract, blood pressure and heart.', '35.000', 'images\\granola_2.png'),
+	('3','Ingrendient', 'Heathy foods', 'We provide color additives, food additives, sweeteners, preservatives and so on. Healthyfood is specialized in supply food additives and ingredients', '19.000', 'images\\ingredient_3.png');
