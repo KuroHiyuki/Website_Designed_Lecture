@@ -1,3 +1,4 @@
+
 <?php
 // Hiện tại chỉ hoàn thành chỉnh sữa xong giao diện 
 include 'config.php';
@@ -22,22 +23,21 @@ if(isset($_POST['submit'])){
       while($row = $stmt->fetch()) {
 
          if($row['UserPassword'] == $pass){
-            echo "Logged in successfully! <a href='javascript: history.go(-1)'>Ok</a>";
             $_SESSION['UserId'] = $row['UserId'];
             $_SESSION['UserName'] = $row['UserName'];
             header('location:home.php');
             setcookie("Success", "Logged in successfully!", time()+1, "/","", 0);
          }
          else{
-            echo "Incorrect email or password! <a href='javascript: history.go(-1)'>Login failed!</a>";
-            //$message[] = 'Incorrect email or password!';
+            //<script language="javascript" > arlet('Incorrect email or password!'); window.location="register1.php";</script>
+            $message[]="Incorrect email or password!";
             setcookie("Error", "Login failed!", time()+1, "/","", 0);
       }
    }
 
    }else{
-      echo "No user found! <a href='javascript: history.go(-1)'>Login failed!</a>";
-      //$message[] = 'No user found!';
+      //<script language="javascript"> arlet('No user found!')</script>
+      $message[]="No user found!";
       setcookie("Error", "Login failed!", time()+1, "/","", 0);
    }
 }
@@ -45,8 +45,9 @@ if(isset($_POST['submit'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
+
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -99,8 +100,8 @@ if(isset($message)){
       <p>Don't have an account? <a href="register.php">register now</a></p>
    </form>
 
-</section>
 
+</section>
 
 </body>
 </html>
