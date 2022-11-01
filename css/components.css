@@ -115,7 +115,7 @@ section{
    font-size: 3.5rem;
 }
 
-.message{
+/*.message{
    position: sticky;
    top:0;
    max-width: 50%;
@@ -144,7 +144,7 @@ section{
 .message i:hover{
    color:var(--black);
 }
-
+*/
 .empty{
    padding:1.5rem;
    background: var(--white);
@@ -213,7 +213,7 @@ section{
 }
 
 .header{
-   background: #F0EEED;
+   background: #f0eeed;
    position: sticky;
    top:0; left:0; right:0;
    z-index: 1000;
@@ -358,18 +358,6 @@ section{
    margin:1rem 0;
    background-color: var(--light-bg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer{
    background-color: var(--white);

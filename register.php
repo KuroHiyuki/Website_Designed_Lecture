@@ -63,7 +63,7 @@ if(isset($_POST['submit'])){
 if(isset($message)){
    foreach($message as $message){
       echo '
-      <div class="message">
+      <div class="box">
          <span>'.$message.'</span>
          <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
       </div>

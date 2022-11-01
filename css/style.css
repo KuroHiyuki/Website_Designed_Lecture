@@ -152,7 +152,7 @@
    border:var(--border);
    width: 100%;
 }
-
+/*
 .quick-view .box{
    max-width: 50rem;
    padding:2rem;
@@ -208,7 +208,7 @@
    font-size: 1.5rem;
    color:var(--light-color);
 }
-
+*/
 .p-category{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -844,11 +844,17 @@
    padding:1rem 0;
  }
 
-
-
-
-
-
+ .table{
+   background: rgb(210, 237, 210);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding:2rem 9%;
+ }
+ 
+.imgs {
+   width: 380px;
+}
 
 @media (max-width:768px){
 

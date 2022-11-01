@@ -32,8 +32,6 @@ if(isset($message)){
       <div class="icons">
          <a href="#" class="fas fa-heart"></a>
          <?php 
-         //$UserId = $_SESSION['UserId'];
-         //$UserName = $_SESSION['Username'];
          if(!isset($_SESSION['UserId'])){?>
             <a href="login.php" id="user-btn" class="fas fa-user-circle"></a>  
          <?php } else {?>

@@ -38,15 +38,15 @@ if(!isset($user_id)){
       <div class="box">
          <img src="images/about-img-1.png" alt="">
          <h3>why choose us?</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, a quod, quis alias eius dignissimos pariatur laborum dolorem ad ullam iure, consequatur autem animi illo odit! Atque quia minima voluptatibus.</p>
-         <a href="contact.php" class="btn">contact us</a>
+         <p>Specializes in providing all kinds of brown rice vermicelli, brown rice directly from the manufacturer, ensuring food safety. Fast shipping, enthusiastic advice, careful packaging.</p>
+        
       </div>
 
       <div class="box">
          <img src="images/about-img-2.png" alt="">
          <h3>what we provide?</h3>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, a quod, quis alias eius dignissimos pariatur laborum dolorem ad ullam iure, consequatur autem animi illo odit! Atque quia minima voluptatibus.</p>
-         <a href="shop.php" class="btn">our shop</a>
+         <p>Always provide healthy foods such as: </br>Brow rice </br>Vegetables noodele </br>Granola </br>Ingrendient</p>
+      
       </div>
 
    </div>
@@ -60,8 +60,8 @@ if(!isset($user_id)){
    <div class="box-container">
 
       <div class="box">
-         <img src="images/pic-1.png" alt="">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptates sit earum, neque non cupiditate amet deserunt aperiam quas ex.</p>
+         <img src="images/pic-1.jpg" alt="">
+         <p>Good product quality, nice packaging, fast delivery,Shop enthusiastic advice,  Will support for a long time.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -69,12 +69,12 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Tong Nhu Quynh</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-2.png" alt="">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptates sit earum, neque non cupiditate amet deserunt aperiam quas ex.</p>
+         <img src="images/pic-2.jpg" alt="">
+         <p>Good product quality. Shop enthusiastic advice. Fast shipping.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -82,12 +82,12 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Ho Thi Minh Huyen</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-3.png" alt="">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptates sit earum, neque non cupiditate amet deserunt aperiam quas ex.</p>
+         <img src="images/pic-3.jpg" alt="">
+         <p>Good product quality. Shop enthusiastic advice. Fast shipping. Dedicated customer service. Satisfied.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -95,12 +95,12 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Nguyen Hoang Phuong</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-4.png" alt="">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptates sit earum, neque non cupiditate amet deserunt aperiam quas ex.</p>
+         <img src="images/pic-4.jpg" alt="">
+         <p>Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -108,12 +108,12 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Le Thi Thuy Trang</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-5.png" alt="">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptates sit earum, neque non cupiditate amet deserunt aperiam quas ex.</p>
+         <img src="images/pic-5.jpg" alt="">
+         <p>The products here are, in my opinion, extremely good quality and stable for such a price.I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -121,12 +121,12 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Huynh Hoang Anh Thu</h3>
       </div>
 
       <div class="box">
-         <img src="images/pic-6.png" alt="">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptates sit earum, neque non cupiditate amet deserunt aperiam quas ex.</p>
+         <img src="images/pic-6.jpg" alt="">
+         <p>The product is delivered very quickly. Also, I bought it during the sale, so I got a lot of discount.</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -134,7 +134,7 @@ if(!isset($user_id)){
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
-         <h3>john deo</h3>
+         <h3>Nguyen Tuyet Loan</h3>
       </div>
 
    </div>
