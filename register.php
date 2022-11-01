@@ -1,6 +1,7 @@
 <?php
 
 include 'config.php';
+//include 'js/validate.js';
 
 if(isset($_POST['submit'])){
 
@@ -20,14 +21,19 @@ if(isset($_POST['submit'])){
    $select->execute([$email]);
 
    if($select->rowCount() > 0){
-      $message[] = 'User email already exist!';
+      echo "User email already exist! <a href='javascript: history.go(-1)'>Trở lại</a>";
+      exit;
+      //$message[] = 'User email already exist!';
    }else{
       if($pass != $cpass){
-         $message[] = 'Confirm password not matched!';
+         echo "Confirm password not matched! <a href='javascript: history.go(-1)'>Trở lại</a>";
+         exit;
+         //$message[] = 'Confirm password not matched!';
       }else{
          $insert = $connect->prepare("INSERT INTO UserInfo (Username, UserEmail, UserPassword,UserPhone, UserBirthday) VALUES(?,?,?,?,?)");
          $insert->execute([$name, $email, $pass, $tel, $birthday]);
-            $message[] = 'Registered successfully!';
+            echo '<script language="javascript">alert("Registered successfully!"); window.location="register.php";</script>';
+            //$message[] = 'Registered successfully!';
             header('location:login.php');
 
       }
@@ -51,7 +57,7 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-
+   
 <?php
 
 if(isset($message)){
@@ -71,17 +77,17 @@ if(isset($message)){
 
    <form action="" enctype="multipart/form-data" method="POST">
       <h3>Register now</h3>
-      <input type="name" name="name" class="box" placeholder="Enter your name" required></br>
-      <input type="email" name="email" class="box" placeholder="Enter your email" required></br>
-      <input type="password" name="pass" class="box" placeholder="Enter your password" required></br>
-      <input type="password" name="cpass" class="box" placeholder="Confirm your password" required></br>
-      <input type="tel" name="phone" class="box" required pattern="[0-9]{4}[0-9]{3}[0-9]{3}" placeholder="07xx.xxx.xxx"></br>
-      <input type="date" name="Birthday" class = "box"></br>
-      <input type="submit" value="register now" class="btn" name="submit"></br>
-      <p>Already have an account? <a href="login.php">Login now</a></p></br>
+      <input type="name" name="name" class="box" placeholder="Enter your name" >
+      <input type="email" name="email" class="box" placeholder="Enter your email" >
+      <input type="password" name="pass" class="box" placeholder="Enter your password" >
+      <input type="password" name="cpass" class="box" placeholder="Confirm your password" >
+      <input type="tel" name="phone" class="box" placeholder="07xx.xxx.xxx">
+      <input type="date" name="Birthday" class = "box">
+      <input type="submit" value="register now" class="btn" name="submit">
+      <p>Already have an account? <a href="login.php">Login now</a></p>
    </form>
 </section>
-
+<!-- <script src="/validate.js"></script> -->
 </body>
 </html>
 

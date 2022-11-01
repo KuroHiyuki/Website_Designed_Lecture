@@ -1,6 +1,5 @@
 CREATE DATABASE Webmanagement;
 
-
 DROP TABLE IF EXISTS UserInfo;
 CREATE TABLE UserInfo (
   UserId int(100) NOT NULL AUTO_INCREMENT,
@@ -23,6 +22,18 @@ CREATE TABLE Products (
   ProductsImage varchar(100) NOT NULL,
   PRIMARY KEY (ProductsId)
 ) CHARSET=utf8;
+
+DROP TABLE IF EXISTS Message;
+CREATE TABLE Message (
+  MessageId int(100) NOT NULL AUTO_INCREMENT,
+  MessageUser_id int(100) NOT NULL,
+  MessageName varchar(100) NOT NULL,
+  MessageEmail varchar(100) NOT NULL,
+  MessageNumber varchar(12) NOT NULL,
+  Message varchar(500) NOT NULL,
+  PRIMARY KEY (MessageId)
+) CHARSET=utf8;
+
 
 INSERT INTO userinfo (`UserName`, `UserEmail`, `UserPassword`, `UserPhone`, `UserBirthday`, `UserImage`)
 VALUES 

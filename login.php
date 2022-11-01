@@ -23,19 +23,22 @@ if(isset($_POST['submit'])){
       while($row = $stmt->fetch()) {
 
          if($row['UserPassword'] == $pass){
-
+            echo "Logged in successfully! <a href='javascript: history.go(-1)'>Ok</a>";
+            $_SESSION['UserId'] = $row['UserId'];
             $_SESSION['UserName'] = $row['UserName'];
             header('location:home.php');
             setcookie("Success", "Logged in successfully!", time()+1, "/","", 0);
          }
          else{
-         $message[] = 'Incorrect email or password!';
-         setcookie("Error", "Login failed!", time()+1, "/","", 0);
+            echo "Incorrect email or password! <a href='javascript: history.go(-1)'>Login failed!</a>";
+            //$message[] = 'Incorrect email or password!';
+            setcookie("Error", "Login failed!", time()+1, "/","", 0);
       }
    }
 
    }else{
-      $message[] = 'No user found!';
+      echo "No user found! <a href='javascript: history.go(-1)'>Login failed!</a>";
+      //$message[] = 'No user found!';
       setcookie("Error", "Login failed!", time()+1, "/","", 0);
    }
 }
@@ -45,6 +48,13 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- Liên kết đến css  -->
+   <link rel="stylesheet" href="css/components.css">
+   <link rel="stylesheet" href="css/style.css">
+   
    <meta charset="UTF-8">
    <!-- Xác định kiểu mã hoá của kỹ tự  -->
    
@@ -53,15 +63,9 @@ if(isset($_POST['submit'])){
 
    <title>Login</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- Liên kết đến css  -->
-   <link rel="stylesheet" href="css/components.css">
-
+   
 </head>
 <body>
-
 <?php
 if(isset($message)){
    foreach($message as $message){
@@ -75,7 +79,14 @@ if(isset($message)){
 }
 
 ?>
-   
+<header class="header">
+
+<meta charset="UTF-8">
+<div class="flex">
+
+<a href="home.php" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
+</header>
+
 <section class="form-container">
 <!-- Thẻ section class giúp phân ra vùng đọc lập  và class = form container lấy ra thiết lập sẵn từ file css 
 để trình bày section này ở trang này  -->

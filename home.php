@@ -1,10 +1,7 @@
 <?php
 
-//@include 'config.php';
-
+include 'config.php';
 session_start();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -81,9 +78,37 @@ session_start();
 <section class="products">
 
    <h1 class="title">latest products</h1>
-
    <div class="box-container">
 
+<div class="box">
+   <img src="images/browrice.png" alt="">
+   <h3>Brown rice</h3>
+   <p>A whole grain and a good source of magnesium, phosphorus, selenium, thiamine, niacin, vitamin B6, and manganese and does provide some fiber.</p>
+   <a href="category.php?category=fruits" class="btn">100$</a>
+</div>
+
+<div class="box">
+   <img src="images/noodle_3.png" alt="">
+   <h3>Noodles</h3>
+   <p>Good for people with diabetes, overweight, create a feeling of fullness longer, support cholesterol control</p>
+   <a href="category.php?category=meat" class="btn">150$</a>
+</div>
+
+<div class="box">
+   <img src="images/granola_1.png" alt="">
+   <h3>Granola</h3>
+   <p>A food made of baked grains, nuts, and dried fruit. Good for the digestive tract, blood pressure and heart.</p>
+   <a href="category.php?category=vegitables" class="btn">50$</a>
+</div>
+
+<div class="box">
+   <img src="images/ingredient.jpg" alt="">
+   <h3>Ingrendient</h3>
+   <p>We provide color additives, food additives, sweeteners, preservatives and so on. Healthyfood is specialized in supply food additives and ingredients.</p>
+   <a href="category.php?category=fish" class="btn">90$</a>
+</div>
+
+</div>
 
 </section>
 
