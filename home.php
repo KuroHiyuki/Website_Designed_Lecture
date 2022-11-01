@@ -42,7 +42,7 @@ session_start();
 
 <section class="home-category">
 
-   <h1 class="title">shop by category</h1>
+   <h1 class="title">lastest product</h1>
 
    <div class="box-container">
 

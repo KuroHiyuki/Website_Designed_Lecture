@@ -17,12 +17,11 @@ if(isset($message)){
 
    <div class="flex">
    
-   <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
+   <a href="home.php" class="logo"><i class="fas fa-shopping-basket"></i>Healthyfood</a>
             <form action="" class="search-box-container">
                 <input type="search" id="search-box" placeholder="search here...">
                 <label for="search-box" class="fas fa-search"></label>
         </form>
-        <!--<div id="menu-bar" class="fas fa-bars"></div>-->
       <nav class="navbar">
          <a href="home.php">Home</a>
          <a href="about.php">About</a>
@@ -31,9 +30,9 @@ if(isset($message)){
 
       <div class="icons">
          <a href="#" class="fas fa-heart"></a>
-         <a href="#" id="user-btn" class="fas fa-user-circle"></a>
+         <a href="login.php" id="user-btn" class="fas fa-user-circle"></a>
          <div id="menu-btn" class="fas fa-bars"></div>
-         <a href ="logout.php"><div class ="fas fa-sign-out"></div>
+         <a href="logout.php"><div  class="fas fa-sign-out" ></div></a>
          
       </div>
 

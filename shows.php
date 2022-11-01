@@ -46,29 +46,38 @@ if(!isset($user_id)){
             
             if($rowCount > 0){
                 while($row = $stmt->fetch()){?>
-                <center><table border="1"; style="width: 80%"; table-layout: fixed; height:200px>
+                <center><table border="1"; style="width: 70%"; table-layout: fixed; height:300px>
                 
                     <tr>
-                        <td rowspan ="5" class ="td1">
+                        <td rowspan ="8" class ="td1">
                             <img src="<?= $row["ProductsImage"]?>" >
                             
                         </td>
                     </tr>
                     <tr>
-                        <td row><b>Products ID:</b> <?php echo$row["ProductsId"]; ?> </td>
+                        <td><h1><?php echo $row["ProductsName"]; ?></h1> </td>
                     </tr>
                     <tr>
-                        <td><b>Products Name:</b> <?php echo $row["ProductsName"]; ?> </td>
+                        <td row><h3>Products ID:</h3> <?php echo$row["ProductsId"]; ?> </td>
                     </tr>
                     <tr>
-                        <td><b>Product Cagetory:</b> <?php echo $row["ProductsCagetory"]; ?>  </td>
+                        <td><h3>Products Name:</h3> <?php echo $row["ProductsName"]; ?> </td>
                     </tr>
                     <tr>
-                        <td><b>Product Price</b> <?php echo $row["ProductsPrice"]; ?> </td>
-                    </tr>  
+                        <td><h3>Product Cagetory:</h3> <?php echo $row["ProductsCagetory"]; ?>  </td>
+                    </tr>
+                    <tr>
+                        <td><h3>Product Price: </h3> <?php echo $row["ProductsPrice"]; ?> </td>
+                    </tr> 
+                    <tr>
+                        <td><h3>Made in:</h3> <?php echo $row["ProductsMadein"]; ?> </td>
+                    </tr> 
+                    <tr>
+                        <td><h3>Expiry:</h3> <?php echo $row["ProductsExp"]; ?> </td>
+                    </tr>
                     <tr height = 20px></tr>
                     <tr>
-                        <br/><td colspan="2" ><b>Product Detail :</b> <?php echo $row["ProductsDetails"]; ?> </td>
+                        <br/><td colspan="2" class="detail"><h2>Product Detail :</h2> <?php echo $row["ProductsDetails"]; ?> </td>
                     </tr>  
                    
         <?php
