@@ -12,17 +12,6 @@ CREATE TABLE UserInfo (
   PRIMARY KEY (UserId)
 ) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS Products;
-CREATE TABLE Products (
-  ProductsId int(100) NOT NULL,
-  ProductsName varchar(100) NOT NULL,
-  ProductsCagetory varchar(20) NOT NULL,
-  ProductsDetails varchar(500) NOT NULL,
-  ProductsPrice int(100) NOT NULL,
-  ProductsImage varchar(100) NOT NULL,
-  PRIMARY KEY (ProductsId)
-) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 DROP TABLE IF EXISTS Message;
 CREATE TABLE Message (
   MessageId int(100) NOT NULL AUTO_INCREMENT,
@@ -35,7 +24,7 @@ CREATE TABLE Message (
 ) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS Products;
-CREATE TABLE IF NOT EXISTS `products` (
+CREATE TABLE Products (
   ProductsId int(100) NOT NULL,
   ProductsName varchar(100) NOT NULL,
   ProductsCagetory varchar(20) NOT NULL,
@@ -44,6 +33,14 @@ CREATE TABLE IF NOT EXISTS `products` (
   ProductsImage varchar(100) NOT NULL,
   ProductsMadein varchar(60) DEFAULT NULL,
   ProductsExp varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`ProductsId`)
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE ProductsHome (
+  ProductsId int(100) NOT NULL,
+  ProductsName varchar(100) NOT NULL,
+  ProductsDetails varchar(1000) NOT NULL,
+  ProductsImage varchar(100) NOT NULL,
   PRIMARY KEY (`ProductsId`)
 ) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -63,5 +60,9 @@ VALUES
 	('Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-24', 'images\\pic-2.png'), 
 	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-09-02', 'images\\pic-3.png'),
 	('Trang', '030236200180@st.buh.edu.vn', 'dangki', '0906060505', '2002-05-24', 'images\\pic-4.png');
-
-
+INSERT INTO ProductsHome (`ProductsId`, `ProductsName`, `ProductsDetails`, `ProductsImage`)
+VALUES
+	(0, 'Brown rice', 'A whole grain and a good source of magnesium, phosphorus, selenium, thiamine, niacin, vitamin B6, and manganese and does provide some fiber.', 'images/browrice.png'),
+	(1, 'Noodles','Good for people with diabetes, overweight, create a feeling of fullness longer, support cholesterol control.','images/noodle_3.png'),
+	(2, 'Granola','A food made of baked grains, nuts, and dried fruit. Good for the digestive tract, blood pressure and heart.','images/granola_1.png'),
+	(3, 'Ingrendient','We provide color additives, food additives, sweeteners, preservatives and so on. Healthyfood is specialized in supply food additives and ingredients.','images/ingredient.jpg');
