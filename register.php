@@ -140,8 +140,8 @@ if(isset($message)){
       <input type="email" name="email" class="box" placeholder="Enter your email" required>
       <input type="password" name="pass" class="box" placeholder="Enter your password" minlength = "6" required>
       <input type="password" name="cpass" class="box" placeholder="Confirm your password" required>
-      <input type="tel" name="phone" class="box" pattern="[0-9]{4}[0-9]{3}[0-9]{3}" placeholder="07xx.xxx.xxx" >
-      <input type="date" name="Birthday" class = "box" >
+      <input type="tel" name="phone" class="box" required pattern="[0-9]{4}[0-9]{3}[0-9]{3}" placeholder="07xx.xxx.xxx" >
+      <input type="date" name="Birthday" class = "box" required>
       <input type="submit" value="register now" class="btn" name="submit">
       <p>Already have an account? <a href="login.php">Login now</a></p>
    </form>
