@@ -1,6 +1,5 @@
 CREATE DATABASE Webmanagement;
 
-
 DROP TABLE IF EXISTS UserInfo;
 CREATE TABLE UserInfo (
   UserId int(100) NOT NULL AUTO_INCREMENT,
@@ -11,7 +10,7 @@ CREATE TABLE UserInfo (
   UserBirthday date,
   UserImage varchar(100) NOT NULL,
   PRIMARY KEY (UserId)
-) CHARSET=utf8;
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS Products;
 CREATE TABLE Products (
@@ -22,26 +21,27 @@ CREATE TABLE Products (
   ProductsPrice int(100) NOT NULL,
   ProductsImage varchar(100) NOT NULL,
   PRIMARY KEY (ProductsId)
-) CHARSET=utf8;
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
 
-INSERT INTO userinfo (`UserName`, `UserEmail`, `UserPassword`, `UserPhone`, `UserBirthday`, `UserImage`)
+DROP TABLE IF EXISTS Message;
+CREATE TABLE Message (
+  MessageId int(100) NOT NULL AUTO_INCREMENT,
+  MessageUser_id int(100) NOT NULL,
+  MessageName varchar(100) NOT NULL,
+  MessageEmail varchar(100) NOT NULL,
+  MessageNumber varchar(12) NOT NULL,
+  Message varchar(500) NOT NULL,
+  PRIMARY KEY (MessageId)
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO Userinfo (UserName, UserEmail, UserPassword, UserPhone, UserBirthday, UserImage)
 VALUES 
-	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0909090909', '2002-09-02', 'images\\pic-1.png'),
-	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-26', 'images\\pic-2.png'), 
-	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-11-10', 'images\\pic-3.png'),
-	('Trang', '030236200180@st.buh.edu.vn', 'trangday', '0906060505', '2002-10-08', 'images\\pic-4.png');
--------------------------
-DROP TABLE IF EXISTS Products;
-CREATE TABLE Products (
-  ProductsId int(100) NOT NULL,
-  ProductsName varchar(100) NOT NULL,
-  ProductsCagetory varchar(20) NOT NULL,
-  ProductsDetails varchar(500) NOT NULL,
-  ProductsPrice int(100) NOT NULL,
-  ProductsImage varchar(100) NOT NULL,
-  PRIMARY KEY (ProductsId)
-) CHARSET=utf8;
-INSERT INTO products (ProductsId, ProductsName, ProductsCagetory, ProductsDetails, ProductsPrice, ProductsImage)
+	( 'Phương', '030236200121@st.buh.edu.vn', '123456', '0798222937', '2002-09-02', 'images\\pic-1.png'),
+	( 'Quỳnh', '030236200131@st.buh.edu.vn', 'quynhcute', '0123456789', '2002-05-24', 'images\\pic-2.png'), 
+	('Huyền', '030236200061@st.buh.edu.vn', 'huyenne', '0909080707', '2002-09-02', 'images\\pic-3.png'),
+	('Trang', '030236200180@st.buh.edu.vn', 'dangki', '0906060505', '2002-05-24', 'images\\pic-4.png');
+
+INSERT INTO Products (ProductsId, ProductsName, ProductsCagetory, ProductsDetails, ProductsPrice, ProductsImage)
 VALUES 
 	('0', 'Brown rice', 'Heathy foods', 'Brown rice is one of the whole grains, brown rice consists of bran fibers, rice germ and carbohydrate-rich endosperm.A whole grain and a good source of magnesium, phosphorus, vitamin B6,..., and manganese and does provide some fiber.', '29.000', 'images\\browrice.png'),
 	( '1','Noodles', 'Heathy foods', 'Good for people with diabetes, overweight, create a feeling of fullness longer, support cholesterol control, reduces the risk of cancer, Promotes weight loss', '35.000', 'images\\noodles_2.png'), 
