@@ -22,25 +22,20 @@ if(isset($message)){
                 <input type="search" id="search-box" placeholder="search here...">
                 <label for="search-box" class="fas fa-search"></label>
         </form>
-        <div id="menu-bar" class="fas fa-bars"></div>
+        <!--<div id="menu-bar" class="fas fa-bars"></div>-->
       <nav class="navbar">
          <a href="home.php">Home</a>
-         <a href="shop.php">Shop</a>
-         <a href="orders.php">Orders</a>
          <a href="about.php">About</a>
          <a href="contact.php">Contact</a>
       </nav>
 
       <div class="icons">
          <a href="#" class="fas fa-heart"></a>
-         <a href="#" class="fas fa-user-circle"></a>
+         <a href="#" id="user-btn" class="fas fa-user-circle"></a>
          <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <a href="search_page.php" class="fas fa-search"></a>
+         <a href ="logout.php"><div class ="fas fa-sign-out"></div>
          
       </div>
-
-      
 
    </div>
 

@@ -9,8 +9,8 @@ session_destroy();
 header('location:login.php');*/
 
 session_start();
-if(isset($_SESSION['email'])&& $_SESSION['email']!=NULL){
-    unset($_SESSION[email]);
+if(isset($_SESSION['UserName'])&& $_SESSION['UserName']!=NULL){
+    unset($_SESSION[UserName]);
 }
 header('location:login.php');
 

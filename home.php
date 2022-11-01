@@ -50,42 +50,43 @@ session_start();
          <img src="images/browrice.png" alt="">
          <h3>Brown rice</h3>
          <p>A whole grain and a good source of magnesium, phosphorus, selenium, thiamine, niacin, vitamin B6, and manganese and does provide some fiber.</p>
-         <a href="category.php?category=fruits" class="btn">Brown rice</a>
+         <a href="shows.php?id=0" class="btn">Brown rice</a>
+         
       </div>
 
       <div class="box">
          <img src="images/noodle_3.png" alt="">
-         <h3>Noodles</h3>
+         <h3> Noodles</h3>
          <p>Good for people with diabetes, overweight, create a feeling of fullness longer, support cholesterol control</p>
-         <a href="category.php?category=meat" class="btn">Noodles</a>
+         <a href="shows.php?id=1" class="btn">Noodles</a>
       </div>
 
       <div class="box">
          <img src="images/granola_1.png" alt="">
          <h3>Granola</h3>
          <p>A food made of baked grains, nuts, and dried fruit. Good for the digestive tract, blood pressure and heart.</p>
-         <a href="category.php?category=vegitables" class="btn">Granola</a>
+         <a href="shows.php?id=2" class="btn">Granola</a>
       </div>
 
       <div class="box">
          <img src="images/ingredient.jpg" alt="">
          <h3>Ingrendient</h3>
          <p>We provide color additives, food additives, sweeteners, preservatives and so on. Healthyfood is specialized in supply food additives and ingredients.</p>
-         <a href="category.php?category=fish" class="btn">Ingrendient</a>
+         <a href="shows.php?id=3" class="btn">Ingrendient</a>
       </div>
 
    </div>
 
 </section>
 
-<section class="products">
+<!-- <section class="products">
 
    <h1 class="title">latest products</h1>
 
    <div class="box-container">
 
 
-</section>
+</section> -->
 
 
 <?php include 'footer.php'; ?>
