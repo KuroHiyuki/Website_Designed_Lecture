@@ -79,11 +79,11 @@ if(isset($message)){
         
          if (name == null || name == "") {
                alert("Name can't be blank");
-               //return
+               return false;
          } 
          if (pass.length < 6) {
                alert("Password must be at least 6 characters long.");
-               //return
+               return false;
          }
          if (email == ''){
                alert("Email can't be blank");
@@ -92,12 +92,12 @@ if(isset($message)){
          if (!isEmail(email)){
                alert('Email invalidate');
                return false;
+
          } else if (phone == '') {
                alert("Phone number can't be blank");
          } else 
          if (!isPhone(phone)) {
                alert('Phone number invalidate');
-               //isCheck = false;
                return false;
          } else {
                setSuccess(phone);

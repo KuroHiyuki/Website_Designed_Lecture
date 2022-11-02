@@ -44,9 +44,13 @@ session_start();
 
    <div class="box-container">
    <?php 
+<<<<<<< HEAD
             $sql = "SELECT * FROM Productshome ";
 //Khởi tạo Prepare statement (Chuẩn bị một câu lệnh SQL 
 //làm khung/mẫu -đóng vai trò như tham số ) từ biến $conn 
+=======
+            $sql = "SELECT * FROM ProductsHome ";
+>>>>>>> 0ee8c66e2930101845b54086e1b336fa85208af6
             $stmt = $connect->prepare($sql);
 //excute thực hiện câu lệnh truy vấn - gán giá trị lần lượt cho p.h
             $stmt->execute();
