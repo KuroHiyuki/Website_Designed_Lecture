@@ -77,6 +77,5 @@ session_start();
 <?php include 'footer.php'; ?>
 
 <script src="js/script.js"></script>
-
 </body>
 </html>

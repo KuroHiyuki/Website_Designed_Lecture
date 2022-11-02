@@ -84,8 +84,7 @@ if(!isset($user_id)){
                     <tr height = 20px></tr>
                     <tr>
                         <br/><td colspan="2" class="detail"><h2>Product Detail :</h2> <?php echo $row["ProductsDetails"]; ?> </td>
-                    </tr>  
-                   
+                    </tr>            
         <?php
             }
         ?>
