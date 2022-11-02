@@ -8,6 +8,7 @@ session_start();
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <!-- chế độ xem thay đổi theo thiết bị -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Home page</title>
 
@@ -44,14 +45,19 @@ session_start();
    <div class="box-container">
    <?php 
             $sql = "SELECT * FROM Productshome ";
+//Khởi tạo Prepare statement (Chuẩn bị một câu lệnh SQL 
+//làm khung/mẫu -đóng vai trò như tham số ) từ biến $conn 
             $stmt = $connect->prepare($sql);
-         
+//excute thực hiện câu lệnh truy vấn - gán giá trị lần lượt cho p.h
             $stmt->execute();
+//rowCount(): trả về số hàng bị ảnh hưởng bởi câu lệnh DELETE, INSERT hoặc UPDATE
             $rowCount = $stmt->rowCount();  
+//PDO::FETCH_ASSOC: Trả về dữ liệu dạng mảng với key là tên của column (column của các table trong database) 
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
       
             if($rowCount > 0){
                while($row = $stmt->fetch()) {
+                  //xử lý hthi dl
          ?>
       <div class="box">
          

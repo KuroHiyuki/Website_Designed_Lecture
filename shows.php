@@ -17,7 +17,6 @@ if(!isset($user_id)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="css/text" href="/SanPham.css"> 
     <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    
@@ -31,17 +30,24 @@ if(!isset($user_id)){
 </head>
 <body>  
     <?php
+    //Nếu khi import một file bằng lệnh require thì nếu chương trình bị lỗi thì lập tức trình biên dịch sẽ dừng và xuất ra thông báo lỗi. 
+    //Còn nếu sử dụng lệnh include thì đó chỉ là một cảnh báo nên chương trình vẫn chạy cho đến cuối chương trình.
     require_once "header.php";
     
         require_once "config.php";
-        
+  //Hàm isset() dùng để kiểm tra một biến nào đó đã được khởi tạo trong bộ nhớ của máy tính chưa      
         if(isset($_GET["id"]))
         {
             $sql = "SELECT * FROM products WHERE ProductsId = ?";
+ //Placeholder không định danh
+ //Khởi tạo Prepare statement (Chuẩn bị một câu lệnh SQL làm khung/mẫu -đóng vai trò như tham số ) từ biến $conn 
             $stmt = $connect->prepare($sql);  
             $id = $_GET['id'];
+//Phương thức excute gán giá trị lần lượt tron P.Holder
             $stmt->execute([$id]);
+//rowCount(): trả về số hàng bị ảnh hưởng bởi câu lệnh DELETE, INSERT hoặc UPDATE
             $rowCount = $stmt->rowCount();  
+//PDO::FETCH_ASSOC: Trả về dữ liệu dạng mảng với key là tên của column (column của các table trong database) 
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             
             if($rowCount > 0){
